@@ -28,7 +28,7 @@ z = np.linspace(-xyz_lim, xyz_lim, N)
 ### simulation params ###
 dt = 0.1
 SIM_TIME = 1000
-INITIAL = [-10, 0, 0, 2, 0, 0] # [xo, y0, z0, dx0/dt, dy0/dt, dz0/dt]
+INITIAL = [-10, 0, 0, 0.05, 0, 0] # [xo, y0, z0, dx0/dt, dy0/dt, dz0/dt]
 
 
 ### Functions ###
@@ -51,19 +51,17 @@ def ddt_vel_accl(t, y):
             t : time, scalar
             y : position/velocity, vector, [x, y, z, dx/dt, dy/dy, dz/dt]
         Returns:
-            [velocity, acceleration] : velocity and acceleration in a list at current time t
+            [vx, vy, vz, ax, ay, az] : velocity and acceleration in a list at current time t
     """
     velocity = np.array(y[3:])
     B = B_field(y[0], y[1], y[2])
     acceleration = elementary_charge*np.cross(velocity, B)/proton_mass
     return np.concatenate((velocity, acceleration))
-    #return [velocity, acceleration]
 
 
-# damn, how does this work in 3D?? :000
 def solve_equation_of_motion(ddt_vel_accl, SIM_TIME, INITIAL, dt):
     sol = solve_ivp(ddt_vel_accl, [0, SIM_TIME], INITIAL, max_step=dt)
-    path, velocities = sol.y[0], sol.y[1]
+    path, velocities = sol.y[:3], sol.y[3:]
     return path, velocities
 
 
@@ -72,8 +70,9 @@ def solve_equation_of_motion(ddt_vel_accl, SIM_TIME, INITIAL, dt):
 ######################
 p, v = solve_equation_of_motion(ddt_vel_accl, SIM_TIME, INITIAL, dt)
 print(p)
-print(p.shape[0])
+print("shape: ", p.shape[1])
 print(SIM_TIME/dt)
+print("len: ", len(p))
 
 
 ##################
@@ -84,7 +83,9 @@ print(SIM_TIME/dt)
 xx, yy = np.meshgrid(x, y)
 B_xx, B_yy, B_zz = B_field(xx, yy, np.zeros_like(xx))
 plt.streamplot(xx, yy, B_xx, B_yy)
-#plt.plot(x, p.T[1])
+
+x_vals = np.linspace(-xyz_lim, xyz_lim, p.shape[1])
+plt.plot(x_vals, p[1])
 plt.show()
 
 
