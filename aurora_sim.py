@@ -10,7 +10,7 @@ from scipy.constants import mu_0, elementary_charge, proton_mass
 
 
 ### Dipole ###
-dipole_magnitude = 1
+dipole_magnitude = 3
 tilt = 11 # degrees, arb. chosen
 tilt = np.radians(tilt) # angle between z-axis, tiltend about y-axis
 dp_x = np.sin(tilt)*dipole_magnitude
@@ -19,7 +19,7 @@ dp_z = np.cos(tilt)*dipole_magnitude
 dipole = np.array([dp_x, dp_y, dp_z])
 
 ### Space ###
-xyz_lim = 50
+xyz_lim = 10
 N = 100
 x = np.linspace(-xyz_lim, xyz_lim, N)
 y = np.linspace(-xyz_lim, xyz_lim, N)
@@ -27,8 +27,8 @@ z = np.linspace(-xyz_lim, xyz_lim, N)
 
 ### simulation params ###
 dt = 0.1
-SIM_TIME = 1000
-INITIAL = [-10, 0, 0, 0.05, 0, 0] # [xo, y0, z0, dx0/dt, dy0/dt, dz0/dt]
+SIM_TIME = 100
+INITIAL = [-10, 0, -8, 0.55, 0, 0] # [xo, y0, z0, dx0/dt, dy0/dt, dz0/dt]
 
 
 ### Functions ###
@@ -73,6 +73,7 @@ print(p)
 print("shape: ", p.shape[1])
 print(SIM_TIME/dt)
 print("len: ", len(p))
+print("elementary charge: ", elementary_charge)
 
 
 ##################
@@ -80,11 +81,13 @@ print("len: ", len(p))
 ##################
 
 ### B-field ###
-xx, yy = np.meshgrid(x, y)
-B_xx, B_yy, B_zz = B_field(xx, yy, np.zeros_like(xx))
-plt.streamplot(xx, yy, B_xx, B_yy)
+xx, zz = np.meshgrid(x, z)
+B_xx, B_yy, B_zz = B_field(xx, np.zeros_like(xx), zz)
+plt.streamplot(xx, zz, B_xx, B_zz)
+earth = plt.Circle((0, 0), 1, color="blue")
+plt.gca().add_artist(earth)
 
-plt.plot(p[0], p[1])
+plt.plot(p[0], p[2])
 plt.show()
 
 
