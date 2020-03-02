@@ -11,7 +11,7 @@ from scipy.constants import mu_0, elementary_charge, proton_mass
 
 ### Dipole ###
 dipole_magnitude = 1
-tilt = 20 # degrees, arb. chosen
+tilt = 11 # degrees, arb. chosen
 tilt = np.radians(tilt) # angle between z-axis, tiltend about y-axis
 dp_x = np.sin(tilt)*dipole_magnitude
 dp_y = 0
@@ -19,7 +19,7 @@ dp_z = np.cos(tilt)*dipole_magnitude
 dipole = np.array([dp_x, dp_y, dp_z])
 
 ### Space ###
-xyz_lim = 20
+xyz_lim = 50
 N = 100
 x = np.linspace(-xyz_lim, xyz_lim, N)
 y = np.linspace(-xyz_lim, xyz_lim, N)
@@ -84,9 +84,7 @@ xx, yy = np.meshgrid(x, y)
 B_xx, B_yy, B_zz = B_field(xx, yy, np.zeros_like(xx))
 plt.streamplot(xx, yy, B_xx, B_yy)
 
-x_vals = np.linspace(-xyz_lim, xyz_lim, p.shape[1])
-plt.plot(x_vals, p[1])
+plt.plot(p[0], p[1])
 plt.show()
-
 
 
