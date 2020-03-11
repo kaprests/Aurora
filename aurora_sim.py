@@ -106,9 +106,10 @@ plt.gca().add_artist(earth)
 for i in range(len(paths)):
     path = paths[i]
     x0 = (INITIALS[i][0], INITIALS[i][1], INITIALS[i][2])
-    v0 = (INITIALS[i][3], INITIALS[i][4], INITIALS[i][5])
+    v0 = (str(INITIALS[i][3])[:4], str(INITIALS[i][4])[:4], str(INITIALS[i][5])[:4])
     plt.plot(path[0], path[2], label="Start pos: " + str(x0) + "v0: " + str(v0))
 plt.legend()
+#plt.savefig("xz-plane.pdf")
 plt.show()
 
 
@@ -121,9 +122,10 @@ plt.gca().add_artist(earth)
 for i in range(len(paths)):
     path = paths[i]
     x0 = (INITIALS[i][0], INITIALS[i][1], INITIALS[i][2])
-    v0 = (INITIALS[i][3], INITIALS[i][4], INITIALS[i][5])
+    v0 = (str(INITIALS[i][3])[:4], str(INITIALS[i][4])[:4], str(INITIALS[i][5])[:4])
     plt.plot(path[1], path[2], label="Start pos: " + str(x0) + "v0: " + str(v0))
 plt.legend()
+#plt.savefig("yz-plane.pdf")
 plt.show()
 
 
