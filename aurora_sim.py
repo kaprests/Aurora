@@ -80,6 +80,7 @@ def solve_equation_of_motion(ddt_vel_accl, SIM_TIME, INITIAL, dt):
 ######################
 ### Simulate stuff ###
 ######################
+
 paths = []
 velocities = []
 
@@ -91,6 +92,15 @@ for initial in INITIALS:
 #print("Velocity: ", V0)
 #print("Simulation time: ", SIM_TIME)
 #print("distance units moved (if straight line): ", np.sqrt((path[0][-1]-path[0][0])**2 + (path[1][-1]-path[1][0])**2 + (path[2][-1]-path[2][0])**2))
+
+
+##########################
+### Save paths to file ###
+##########################
+
+for i in range(len(paths)):
+    z0 = INITIALS[i][2]
+    np.savetxt(str(z0) + "path.csv", paths[i], delimiter=',')
 
 ##################
 ### Plot stuff ###
@@ -126,6 +136,14 @@ for i in range(len(paths)):
     plt.plot(path[1], path[2], label="Start pos: " + str(x0) + "v0: " + str(v0))
 plt.legend()
 #plt.savefig("yz-plane.pdf")
+plt.show()
+
+
+# Plot the magnitude of the velocity of one of the particles
+velocity = np.sqrt(velocities[0][0]**2+velocities[0][1]**2+velocities[0][2]**2)
+time_vec = np.linspace(0, SIM_TIME, len(velocity))
+plt.plot(time_vec, velocity)
+plt.savefig("velocity_plot.pdf")
 plt.show()
 
 
