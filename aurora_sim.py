@@ -117,7 +117,9 @@ for i in range(len(paths)):
     v0 = (str(INITIALS[i][3])[:4], str(INITIALS[i][4])[:4], str(INITIALS[i][5])[:4])
     plt.plot(path[0], path[2], label="Start pos: " + str(x0) + "v0: " + str(v0))
 plt.legend()
-#plt.savefig("xz-plane.pdf")
+plt.xlabel("x [Earth radii]")
+plt.ylabel("z [Earth radii]")
+plt.savefig("xz-plane.pdf")
 plt.show()
 
 
@@ -133,7 +135,9 @@ for i in range(len(paths)):
     v0 = (str(INITIALS[i][3])[:4], str(INITIALS[i][4])[:4], str(INITIALS[i][5])[:4])
     plt.plot(path[1], path[2], label="Start pos: " + str(x0) + "v0: " + str(v0))
 plt.legend()
-#plt.savefig("yz-plane.pdf")
+plt.xlabel("y [Earth radii]")
+plt.ylabel("z [Earth radii]")
+plt.savefig("yz-plane.pdf")
 plt.show()
 
 
@@ -141,6 +145,8 @@ plt.show()
 velocity = np.sqrt(velocities[0][0]**2+velocities[0][1]**2+velocities[0][2]**2)
 time_vec = np.linspace(0, SIM_TIME, len(velocity))
 plt.plot(time_vec, velocity)
+plt.xlabel("time")
+plt.ylabel("velocity")
 plt.savefig("velocity_plot.pdf")
 plt.show()
 

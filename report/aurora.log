@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.3.9)  13 MAR 2020 02:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.3.9)  13 MAR 2020 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,26 +307,26 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 ) (./aurora.aux)
 \openout1 = `aurora.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-5.
+1.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    ... okay on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -428,62 +428,66 @@ e
 ))
 \c@lstlisting=\count110
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 36.
+(Font)              <12> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 36.
+(Font)              <8> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 36.
+(Font)              <6> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 49.
+(Font)              <7> on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 49.
+(Font)              <5> on input line 45.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 52.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 48.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 <./media/xz-plane.pdf, id=12, 462.52798pt x 346.89601pt>
 File: ./media/xz-plane.pdf Graphic file (type pdf)
 <use ./media/xz-plane.pdf>
-Package pdftex.def Info: ./media/xz-plane.pdf  used on input line 87.
-(pdftex.def)             Requested size: 250.24199pt x 187.68098pt.
+Package pdftex.def Info: ./media/xz-plane.pdf  used on input line 84.
+(pdftex.def)             Requested size: 165.16063pt x 123.87146pt.
 <./media/yz-plane.pdf, id=13, 462.52798pt x 346.89601pt>
 File: ./media/yz-plane.pdf Graphic file (type pdf)
 <use ./media/yz-plane.pdf>
-Package pdftex.def Info: ./media/yz-plane.pdf  used on input line 90.
-(pdftex.def)             Requested size: 250.24199pt x 187.68098pt.
+Package pdftex.def Info: ./media/yz-plane.pdf  used on input line 87.
+(pdftex.def)             Requested size: 165.16063pt x 123.87146pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 86--92
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 83--89
 []$[]$ $[]$ 
  []
 
 <./media/velocity.pdf, id=14, 462.52798pt x 346.89601pt>
 File: ./media/velocity.pdf Graphic file (type pdf)
 <use ./media/velocity.pdf>
-Package pdftex.def Info: ./media/velocity.pdf  used on input line 98.
-(pdftex.def)             Requested size: 250.24199pt x 187.68098pt.
+Package pdftex.def Info: ./media/velocity.pdf  used on input line 93.
+(pdftex.def)             Requested size: 165.16063pt x 123.87146pt.
 [2 <./media/xz-plane.pdf> <./media/yz-plane.pdf
 
 pdfTeX warning: pdflatex (file ./media/yz-plane.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
->] [3 <./media/velocity.pdf>] (./aurora.aux) ) 
+> <./media/velocity.pdf
+
+pdfTeX warning: pdflatex (file ./media/velocity.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>] (./aurora.aux) ) 
 Here is how much of TeX's memory you used:
  5610 strings out of 492167
- 81670 string characters out of 6131559
- 363541 words of memory out of 5000000
+ 81655 string characters out of 6131559
+ 363381 words of memory out of 5000000
  9917 multiletter control sequences out of 15000+600000
  7914 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,9n,42p,505b,1661s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmitt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on aurora.pdf (3 pages, 528479 bytes).
+ 46i,10n,42p,505b,1661s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on aurora.pdf (2 pages, 547814 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 143 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)

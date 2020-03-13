@@ -9,11 +9,7 @@
 \usepackage{textcomp}
 \usepackage{float}
 
-\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
-\definecolor{almond}{rgb}{0.94, 0.87, 0.8}
-\definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
 \definecolor{gainsboro}{rgb}{0.86, 0.86, 0.86}
-\definecolor{gray(x11gray)}{rgb}{0.75, 0.75, 0.75}
 
 \lstset{frame=tb,
   aboveskip=3mm,
@@ -39,7 +35,7 @@ The motion of charged solar wind particles in Earth's magnetic field was simulat
 
 \section{Theory}
 \label{theory}
-Polar light arises when charged particles from the sun are lead towards the Earth's poles by the force from the magnetic field. The magnetic field of the earth can, with rather good accuracy, be modeled as a dipole field, and the path of solar wind particles are studied by looking at a few protons. More details of magnetic field, forces and dipole can be found in Griffiths.*REF*
+Polar light arises when charged particles from the sun are lead towards the Earth's poles by the force from the magnetic field. The magnetic field of the earth can, with rather good accuracy, be modeled as a dipole field, and the path of solar wind particles are studied by looking at a few protons. More details of magnetic field, forces and dipole can be found in Griffiths\cite{griffiths}.
 
 To check the accuracy of the calculation energy, or simply the magnitude of the particles velocities, can be checked to see if it remains constant. This is because the magnetic field does zero work on the particles, and since we don't have included any potential, the velocity should stay constant in magnitude and only change direction.
 
@@ -83,22 +79,25 @@ def solve_equation_of_motion(ddt_vel_accl, SIM_TIME, INITIAL, dt):
 \section{Results and discussion}
 
 \begin{figure}[h]
-    \begin{subfigure}{0.5\textwidth}
-        \includegraphics[width=\linewidth]{./media/xz-plane.pdf}
+    \begin{subfigure}{0.66\textwidth}
+        \begin{subfigure}{0.5\textwidth}
+            \includegraphics[width=\linewidth]{./media/xz-plane.pdf}
+        \end{subfigure}
+        \begin{subfigure}{0.5\textwidth}
+            \includegraphics[width=\linewidth]{./media/yz-plane.pdf}
+        \end{subfigure}
+        \caption{Magnetic field and particles paths in the xz- and yz-plane}
+        \label{paths}
     \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
-        \includegraphics[width=\linewidth]{./media/yz-plane.pdf}
+    \begin{subfigure}{0.33\textwidth}
+        \includegraphics[width=\linewidth]{./media/velocity.pdf}
+        \caption{Magnitude of a particles velocity}
+        \label{velocity}
     \end{subfigure}
-    \caption{Paths in the xz- and yz planes.}
-    \label{paths}
 \end{figure}
 
 \begin{figure}
-    \begin{subfigure}{0.5\textwidth}
-        \includegraphics[width=\linewidth]{./media/velocity.pdf}
-    \end{subfigure}
-    \caption{Magnitude of velocity}
-    \label{velocity}
+
 \end{figure}
 
 \noindent
@@ -107,7 +106,13 @@ perpendicular and parallell to the field.
 
 In figure \ref{velocity} we see that the particles velocity varies very little, as it should. Ideally it should be contant according to section \ref{theory}, but some variation occurs beacause of the error from the numerical solver. Since the variation is small however, the numerical precision seems to be quite good.
 
-\end{document}
 
+\begin{thebibliography}{99}
+    \bibitem{griffiths}
+    Griffiths, D. (2017).\\
+    Introduction to electrodynamics (4th ed.). Cambridge: Cambridge University Press.
+\end{thebibliography}
+
+\end{document}
 
 
