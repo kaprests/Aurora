@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=3cm]{geometry}
 \usepackage[latin1]{inputenc}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -31,7 +31,7 @@
 \begin{document}
 \maketitle
 \section{Abstract}
-The motion of charged solar wind particles in Earth's magnetic field was simulated numerically. The Earth's magnetic field was modeled as the field of a magnetic dipole, and the particles equations of motion were solved using a Runge-Kutta routine.
+The motion of charged solar wind particles in Earth's magnetic field was simulated numerically. The Earth's magnetic field was modeled as the field of a magnetic dipole, and the particle's equations of motion were solved using a Runge-Kutta routine.
 
 \section{Theory}
 \label{theory}
@@ -102,7 +102,7 @@ def solve_equation_of_motion(ddt_vel_accl, SIM_TIME, INITIAL, dt):
 
 \noindent
 From the figures in \ref{paths} we see that the resulting patterns are spiraling trails towards the northern and southern poles, for the chosen initial velocity, which means they potentially could hit the atmosphere of the Earth and generate aurora. From the electromagnetic theory we know that the force from a magnetic field points perpendicular to bothe the field and the particle's velocity, and therefor a spiralling path is expected for a particle with both an initiall velocity
-perpendicular and parallell to the field.
+perpendicular and parallell to the field. The results are therefore consistent with theory and expectations.
 
 In figure \ref{velocity} we see that the particles velocity varies very little, as it should. Ideally it should be contant according to section \ref{theory}, but some variation occurs beacause of the error from the numerical solver. Since the variation is small however, the numerical precision seems to be quite good.
 
