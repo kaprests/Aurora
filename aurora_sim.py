@@ -32,7 +32,7 @@ y = np.linspace(-80, 20, N)
 z = np.linspace(-40, 60, N)
 
 ### simulation params ###
-dt = 1 # Seconds??
+dt = 1
 SIM_TIME = 500 # dts
 INITIALS = [
         [-20, -20, 40, V0_sim, V0_sim, 0],
@@ -46,9 +46,7 @@ INITIALS = [
 ### Functions ###
 def B_field(x, y, z):
     """ Computes B-field from a dipole in position (x,y,x) """
-    r_vec = np.array([x, y, z])
     r = np.maximum(np.sqrt(x**2 + y**2 + z**2), 0.001) # hackaround to avoid mess inn origo :p
-    #dip_dot_r = np.dot(r_vec, dipole)
     dip_dot_r = x*dp_x + y*dp_y + z*dp_z
     B_x = (mu_0/(4*np.pi)) * ( ( (3*x*dip_dot_r)/(r**5) ) - (dp_x)/(r**3) )
     B_y = (mu_0/(4*np.pi)) * ( ( (3*y*dip_dot_r)/(r**5) ) - (dp_y)/(r**3) )
